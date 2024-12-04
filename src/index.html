@@ -1,5 +1,375 @@
-<center>
-<img src="new.png" width="100%"/>
-<br/>
-<img src="ceu_codecamp.jpg"/>
-</center>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jericho Pariñas Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #333;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #444;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #3498db;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .cta-btn {
+            padding: 12px 30px;
+            background-color: #2ecc71;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .cta-btn:hover {
+            background-color: #27ae60;
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 60px 20px;
+            background-color: #ecf0f1;
+        }
+
+        .projects h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .project-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: white;
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .project-card h3 {
+            margin-top: 15px;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #7f8c8d;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .project-card a:hover {
+            background-color: #2980b9;
+        }
+
+        /* Certificates Section */
+        .certificates {
+            padding: 60px 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .certificates h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .certificate-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .certificate-card {
+            background-color: #fff;
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .certificate-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .certificate-card h3 {
+            margin-top: 15px;
+            font-size: 1.5rem;
+        }
+
+        .certificate-card p {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #7f8c8d;
+        }
+
+        .certificate-card a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .certificate-card a:hover {
+            background-color: #2980b9;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 20px;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact form input,
+        .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact form button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        .contact form button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Welcome to Jericho's Portfolio</h1>
+        <p>I am a Graphc Designer passionate about creating unique and innovating designs.</p>
+        <a href="#projects" class="cta-btn">View My Work</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>I am a Graphic Designer. With 2 years of experience in graphic designing, a proven skill to create engaging designs, and a burning passion 
+            for visual storytelling. I am particularly passionate about blending creativity with technical expertise to deliver designs that are not 
+            only aesthetically pleasing but also impactful. I would love the opportunity to contribute my skills to your team and collaborate on exciting design projects.
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>My Projects</h2>
+        <div class="project-cards">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="\\10.20.1.10\profiles$\b.ipsum.STIBALAGTAS\pariñas/1.png" alt="Project 1" width="300px" height="200px">
+                <h3>Lanyard Making</h3>
+                <p>A brief description of the project and the technologies used.</p>
+                <a href="\\10.20.1.10\profiles$\b.ipsum.STIBALAGTAS\pariñas/1.png">View Project</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="\\10.20.1.10\profiles$\b.ipsum.STIBALAGTAS\pariñas/2.png" alt="Project 2">
+                <h3>Project Two</h3>
+                <p>A brief description of the project and the technologies used.</p>
+                <a href="\\10.20.1.10\profiles$\b.ipsum.STIBALAGTAS\pariñas/2.png">View Project</a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 3">
+                <h3>Project Three</h3>
+                <p>A brief description of the project and the technologies used.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="certificates" id="certificates">
+        <h2>My Certificates</h2>
+        <div class="certificate-list">
+            <!-- Certificate 1 -->
+            <div class="certificate-card">
+                <img src="https://via.placeholder.com/300x200" alt="Certificate 1">
+                <h3>Certificate One</h3>
+                <p>A brief description of the certificate and what it represents.</p>
+                <a href="#">View Certificate</a>
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="certificate-card">
+                <img src="https://via.placeholder.com/300x200" alt="Certificate 2">
+                <h3>Certificate Two</h3>
+                <p>A brief description of the certificate and what it represents.</p>
+                <a href="#">View Certificate</a>
+            </div>
+
+            <!-- Certificate 3 -->
+            <div class="certificate-card">
+                <img src="https://via.placeholder.com/300x200" alt="Certificate 3">
+                <h3>Certificate Three</h3>
+                <p>A brief description of the certificate and what it represents.</p>
+                <a href="#">View Certificate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
